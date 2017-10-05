@@ -130,7 +130,7 @@ module PryRemote
 
     # Tells the client the session is terminated
     def kill
-      thread.run
+      thread.run if thread
     end
 
     # @return [InputProxy] Proxy for the input
